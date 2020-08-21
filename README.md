@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # movie-trailer 
 
 ![](https://travis-ci.com/lhz960904/movie-trailer.svg?branch=master)
@@ -45,3 +46,29 @@
 - 个人中心页面，注册和登录
 - 电影详情短片播放、相关电影推荐、剧情简介
 
+=======
+# movie-trailer
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
+>>>>>>> f6b52c979dad93a753c2d2bd3780fcafe89068ff

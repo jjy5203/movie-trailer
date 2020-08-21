@@ -10,7 +10,10 @@ node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< HEAD
 pnpm-debug.log*
+=======
+>>>>>>> f6b52c979dad93a753c2d2bd3780fcafe89068ff
 
 # Editor directories and files
 .idea

@@ -7,6 +7,7 @@
     <div v-if="movies.length && !loading" class="list">
       <div
         v-for="item in movies"
+<<<<<<< HEAD
         :key="item.id"
         class="item"
         @click="selectItem(item.id)"
@@ -15,6 +16,16 @@
           <img v-lazy="item.poster" />
           <em v-if="item.isPlay === '1'" class="rate">
             {{ item.rate }}
+=======
+        :key="item._id"
+        class="item"
+        @click="selectItem(item._id)"
+      >
+        <div class="image">
+          <img v-lazy="item.poster" />
+          <em v-if="item.isPlay === 1" class="rate">
+            {{ toFixed(item.rate) }}
+>>>>>>> f6b52c979dad93a753c2d2bd3780fcafe89068ff
           </em>
         </div>
         <p class="title">{{ item.title }}</p>
@@ -26,6 +37,7 @@
       />
     </div>
     <div v-if="!movies.length && !loading">
+<<<<<<< HEAD
       <img src="~@/assets/images/noresult.png" width="100" height="100" />
     </div>
     <Loading v-if="loading" height="200px" />
@@ -37,6 +49,20 @@ import { useRouter } from "vue-router";
 import { defineComponent } from "vue";
 
 export default defineComponent({
+=======
+      <img src="~common/images/noresult.png" width="100" height="100" />
+    </div>
+    <div v-if="loading" class="loading-wrap">
+      <Loading />
+    </div>
+  </section>
+</template>
+
+<script>
+import { useRouter } from "vue-router";
+
+export default {
+>>>>>>> f6b52c979dad93a753c2d2bd3780fcafe89068ff
   name: "ListBlock",
   props: {
     movies: {
@@ -59,12 +85,21 @@ export default defineComponent({
   setup(props) {
     const router = useRouter();
 
+<<<<<<< HEAD
+=======
+    /* filters */
+    const toFixed = num => {
+      return num.toFixed(1);
+    };
+
+>>>>>>> f6b52c979dad93a753c2d2bd3780fcafe89068ff
     /* 点击查看更多 */
     const goMore = () => {
       router.push(`/list/${props.type}`);
     };
 
     /* 点击查看详情 */
+<<<<<<< HEAD
     const selectItem = (id: string) => {
       router.push(`/movie/${id}`);
     };
@@ -72,6 +107,15 @@ export default defineComponent({
     return { selectItem, goMore };
   }
 });
+=======
+    const selectItem = id => {
+      router.push(`/movie/${id}`);
+    };
+
+    return { toFixed, selectItem, goMore };
+  }
+};
+>>>>>>> f6b52c979dad93a753c2d2bd3780fcafe89068ff
 </script>
 
 <style lang="stylus" scoped>
@@ -80,6 +124,7 @@ export default defineComponent({
   min-height: 200px;
   text-align: center;
   .info
+<<<<<<< HEAD
     layout-flex(center,space-between)
     margin-bottom: 15px;
     font-weight: bold;
@@ -88,6 +133,19 @@ export default defineComponent({
       font-size: $font-size-large;
   .list
     layout-flex(normal,space-between)
+=======
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    .iconfont
+      font-size: 20px;
+  .list
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+>>>>>>> f6b52c979dad93a753c2d2bd3780fcafe89068ff
     .item
       width: 24%;
       .image
@@ -105,6 +163,17 @@ export default defineComponent({
           font-style: italic;
       .title
         padding: 10px 0;
+<<<<<<< HEAD
         text-ellipsis();
         font-size: $font-size-base;
+=======
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 14px;
+  .loading-wrap
+    display: flex;
+    align-items: center;
+    height: 200px;
+>>>>>>> f6b52c979dad93a753c2d2bd3780fcafe89068ff
 </style>

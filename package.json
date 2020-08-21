@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "movie-trailer-next",
+=======
+  "name": "movie-trailer",
+>>>>>>> f6b52c979dad93a753c2d2bd3780fcafe89068ff
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,16 +13,26 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+<<<<<<< HEAD
     "better-scroll": "^2.0.0-beta.10",
     "dplayer": "^1.26.0",
     "vue": "^3.0.0-rc.5",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^8.4.2",
     "vue-router": "^4.0.0-alpha.6",
+=======
+    "better-scroll": "^1.15.2",
+    "core-js": "^3.6.4",
+    "dplayer": "^1.25.1",
+    "good-storage": "^1.1.1",
+    "vue": "^3.0.0-beta.1",
+    "vue-router": "^4.0.0-alpha.5",
+>>>>>>> f6b52c979dad93a753c2d2bd3780fcafe89068ff
     "vue3-lazy": "^1.0.0-alpha.1",
     "vuex": "^4.0.0-alpha.1"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@types/better-scroll": "^1.12.2",
     "@types/dplayer": "^1.25.0",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
@@ -33,19 +47,39 @@
     "@vue/eslint-config-typescript": "^5.0.2",
     "eslint": "^6.8.0",
     "eslint-plugin-prettier": "^3.1.3",
+=======
+    "@vue/cli-plugin-babel": "~4.3.0",
+    "@vue/cli-plugin-eslint": "~4.3.0",
+    "@vue/cli-plugin-router": "~4.3.0",
+    "@vue/cli-plugin-vuex": "~4.3.0",
+    "@vue/cli-service": "~4.3.0",
+    "@vue/compiler-sfc": "^3.0.0-beta.1",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.1.1",
+>>>>>>> f6b52c979dad93a753c2d2bd3780fcafe89068ff
     "eslint-plugin-vue": "^7.0.0-alpha.0",
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
+<<<<<<< HEAD
     "typescript": "~3.9.3",
     "vue-cli-plugin-vue-next": "~0.1.3"
+=======
+    "vue-cli-plugin-vue-next": "~0.1.2"
+>>>>>>> f6b52c979dad93a753c2d2bd3780fcafe89068ff
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
+<<<<<<< HEAD
     "*.{js,jsx,vue,ts,tsx}": [
+=======
+    "*.{js,jsx,vue}": [
+>>>>>>> f6b52c979dad93a753c2d2bd3780fcafe89068ff
       "vue-cli-service lint",
       "git add"
     ]

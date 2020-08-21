@@ -17,7 +17,11 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 import { toRef } from "vue";
+=======
+import { ref } from "vue";
+>>>>>>> f6b52c979dad93a753c2d2bd3780fcafe89068ff
 export default {
   props: {
     content: {
@@ -33,26 +37,55 @@ export default {
       default: "确认"
     }
   },
+<<<<<<< HEAD
   setup(props, { attrs, emit }) {
     const showFlag = toRef(attrs, "modelValue");
 
     const cancel = () => {
       emit("update:modelValue", false);
+=======
+  setup(props, { emit }) {
+    const showFlag = ref(false);
+
+    const show = () => {
+      showFlag.value = true;
+    };
+
+    const hide = () => {
+      showFlag.value = false;
+    };
+
+    const cancel = () => {
+      hide();
+>>>>>>> f6b52c979dad93a753c2d2bd3780fcafe89068ff
       emit("cancel");
     };
 
     const confirm = () => {
+<<<<<<< HEAD
       emit("confirm");
     };
 
     return { showFlag, cancel, confirm };
+=======
+      hide();
+      emit("confirm");
+    };
+
+    return { showFlag, show, hide, cancel, confirm };
+>>>>>>> f6b52c979dad93a753c2d2bd3780fcafe89068ff
   }
 };
 </script>
 
 <style lang="stylus" scoped>
 .confirm
+<<<<<<< HEAD
   page-fixed();
+=======
+  page-fixed()
+  z-index: 99;
+>>>>>>> f6b52c979dad93a753c2d2bd3780fcafe89068ff
   background: rgba(0, 0, 0, 0.6);
   &.confirm-enter-active
     animation: confirm-fadein 0.3s;
@@ -63,6 +96,10 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+<<<<<<< HEAD
+=======
+    z-index: 100;
+>>>>>>> f6b52c979dad93a753c2d2bd3780fcafe89068ff
     .confirm-content
       width: 270px;
       border-radius: 13px;
@@ -71,18 +108,32 @@ export default {
         padding: 19px 15px;
         line-height: 22px;
         text-align: center;
+<<<<<<< HEAD
         color: $color-text-primary;
       .operate
         layout-flex(center);
+=======
+        color: #333;
+      .operate
+        display: flex;
+        align-items: center;
+>>>>>>> f6b52c979dad93a753c2d2bd3780fcafe89068ff
         text-align: center;
         .operate-btn
           flex: 1;
           line-height: 22px;
           padding: 10px 0;
+<<<<<<< HEAD
           border-top: $bordered;
           color: #1e7dd7;
           &.left
             border-right: $bordered;
+=======
+          border-top: 1px solid #999;
+          color: #1e7dd7;
+          &.left
+            border-right: 1px solid #999;
+>>>>>>> f6b52c979dad93a753c2d2bd3780fcafe89068ff
 @keyframes confirm-fadein
   0%
     opacity: 0;
